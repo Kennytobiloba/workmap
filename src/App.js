@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState(list);
 
   return (
-    <div className="App bg-[#0a0325]">
+    <div className="App">
       
       <CategoryList data={data} />
     </div>
