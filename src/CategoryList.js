@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaArrowLeft } from "react-icons/fa"; // Import the Font Awesome icon
+import { FaArrowLeft } from "react-icons/fa"; 
 
 function CategoryList({ data }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
