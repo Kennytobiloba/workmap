@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaArrowLeft } from "react-icons/fa"; 
+import { BsChevronLeft } from "react-icons/bs"; // Updated import statement
 
 function CategoryList({ data }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -18,7 +18,7 @@ function CategoryList({ data }) {
         {selectedCategory ? (
           <>
             <button onClick={resetSelectedCategory} className="text-[14px] text-white underline cursor-pointer mr-2">
-              <FaArrowLeft />
+              <BsChevronLeft className="text-[30px] font-bold" /> 
             </button>
             <p className="font-bold text-[20px] max-md:text-[24px] text-white">
               {selectedCategory.title}
@@ -42,17 +42,10 @@ function CategoryList({ data }) {
             <div className="flex overflow-visible h-full max-md:h-[180px] py-4 items-center">
               <div className={`course-card overflow-visible h-full flex flex-col justify-around pt-4 rounded-[20px] max-md:h-full p-4 bg-gradient-to-br from-[#FF00B8] via-[#585FFF] to-[#920DE3] ${selectedCategory ? 'flex-col' : ''}`} style={{ width: "500px" }}>
                 <div className="flex relative flex-col justify-between py-2 overflow-visible w-full">
-                <h3
-                                                className={
-                                                    category.header
-                                                        ? category.header
-                                                        : "font-[600]"
-                                                }
-                                            >
-                                                {category.title}
-                                            </h3>
-                  <img src={category.img} alt=""  className={`${category.className} max-[1307px]:hidden`} />
-                  
+                  <h3 className={category.header ? category.header : "font-[600]"}>
+                    {category.title}
+                  </h3>
+                  <img src={category.img} alt="" className={`${category.className} max-[1307px]:hidden`} />
                   <p className="font-[400] overflow-visible text-[12px] w-[80%] max-md:w-[90%] max-lg:w-[100%] text-white">{category.desc}</p>
                 </div>
               </div>
